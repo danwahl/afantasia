@@ -1,4 +1,5 @@
 anthropic
+google-genai
 inspect-ai
 openai
-google-genai
+python-chess
