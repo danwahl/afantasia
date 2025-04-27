@@ -15,6 +15,9 @@ def run_benchmark():
         "openai/gpt-4o",
         "openai/gpt-4.1",
         "openai-api/deepseek/deepseek-chat",
+        "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "together/mistralai/Mistral-Small-24B-Instruct-2501",
+        "together/Qwen/Qwen2.5-72B-Instruct-Turbo",
     ]
 
     results = eval_set(
