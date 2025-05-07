@@ -1,4 +1,0 @@
-inspect-ai
-nltk
-openai
-python-chess
