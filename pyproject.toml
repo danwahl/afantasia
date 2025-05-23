@@ -22,7 +22,9 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "pandas",
     "ruff",
+    "tabulate",
 ]
 
 [project.scripts]
