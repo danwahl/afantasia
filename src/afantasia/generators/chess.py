@@ -115,7 +115,7 @@ def save_dataset(dataset, filename=None):
     if filename is None:
         # Create the datasets directory if it doesn't exist
         os.makedirs("data", exist_ok=True)
-        filename = "data/chess_dataset.json"
+        filename = "data/chess.json"
 
     with open(filename, "w") as f:
         json.dump(dataset, f, indent=2)
