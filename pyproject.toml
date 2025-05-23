@@ -28,7 +28,7 @@ dev = [
 ]
 
 [project.scripts]
-afnt = "afantasia.runner:main"
+afantasia = "afantasia.runner:main"
 
 [tool.ruff]
 line-length = 88
