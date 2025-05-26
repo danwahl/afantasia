@@ -66,7 +66,10 @@ def format_dataframe_for_markdown(df):
 
 if __name__ == "__main__":
     # Parse the afantasia logs
-    logs_paths = [Path("../logs/afantasia/logs.json"), Path("../logs/claude-4/logs.json")]
+    logs_paths = [
+        Path("../logs/afantasia/logs.json"),
+        Path("../logs/claude-4/logs.json"),
+    ]
 
     data = pd.DataFrame()
     for logs_path in logs_paths:
@@ -84,5 +87,8 @@ if __name__ == "__main__":
 
     # Format for markdown with percentages and bold max values
     formatted_data = format_dataframe_for_markdown(data)
+    formatted_data.reset_index(inplace=True)
+    formatted_data.index = range(1, len(formatted_data) + 1)
+    formatted_data.index.name = "#"
 
     print(formatted_data.to_markdown())
