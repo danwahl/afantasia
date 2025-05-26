@@ -43,8 +43,8 @@ def format_dataframe_for_markdown(df):
 
     # Convert to percentages and format as strings
     for col in formatted_df.columns:
-        # Find the maximum value in this column (ignoring NaN)
-        max_val = formatted_df[col].max()
+        # Find the minimum value in this column (ignoring NaN)
+        min_val = formatted_df[col].min()
 
         # Format each cell
         formatted_col = []
@@ -55,7 +55,7 @@ def format_dataframe_for_markdown(df):
                 # Convert to percentage
                 pct_str = f"{val * 100:.0f}%"
                 # Bold if it's the maximum value
-                if val == max_val:
+                if val == min_val:
                     pct_str = f"**{pct_str}**"
                 formatted_col.append(pct_str)
 
@@ -78,8 +78,9 @@ if __name__ == "__main__":
         )
         data = pd.concat([data, df], axis=0)
 
+    data = 1 - data  # Convert accuracy to error rate
     data["afantasia"] = data.mean(axis=1)
-    data.sort_values("afantasia", ascending=False, inplace=True)
+    data.sort_values("afantasia", ascending=True, inplace=True)
 
     # Reorder columns to put 'afantasia' first
     cols = ["afantasia"] + [col for col in data.columns if col != "afantasia"]
