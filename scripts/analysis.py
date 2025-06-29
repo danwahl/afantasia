@@ -69,6 +69,11 @@ if __name__ == "__main__":
     logs_paths = [
         Path("../logs/afantasia/logs.json"),
         Path("../logs/claude-4/logs.json"),
+        Path("../logs/gemini-2.5-flash/logs.json"),
+    ]
+
+    exclude_models = [
+        "gemini-2.5-flash-preview-05-20",
     ]
 
     data = pd.DataFrame()
@@ -76,6 +81,8 @@ if __name__ == "__main__":
         df = parse_logs(logs_path).pivot_table(
             index="model", columns="task", values="score"
         )
+        # Filter out models that should be excluded
+        df = df[~df.index.isin(exclude_models)]
         data = pd.concat([data, df], axis=0)
 
     data = 1 - data  # Convert accuracy to error rate
