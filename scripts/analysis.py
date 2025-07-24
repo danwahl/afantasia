@@ -71,6 +71,7 @@ if __name__ == "__main__":
         Path("../logs/claude-4/logs.json"),
         Path("../logs/gemini-2.5-flash/logs.json"),
         Path("../logs/kimi-k2/logs.json"),
+        Path("../logs/gemini-flash-lite/logs.json"),
     ]
 
     exclude_models = [
