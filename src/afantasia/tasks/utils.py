@@ -11,5 +11,5 @@ config = GenerateConfig(
     reasoning_tokens=None,
     # This doesn't work with Anthropic models
     # stop_seqs=["\n"],
-    max_tokens=16,
+    max_tokens=32,
 )

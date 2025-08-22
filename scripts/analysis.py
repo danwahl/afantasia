@@ -72,6 +72,7 @@ if __name__ == "__main__":
         Path("../logs/gemini-2.5-flash/logs.json"),
         Path("../logs/kimi-k2/logs.json"),
         Path("../logs/gemini-flash-lite/logs.json"),
+        Path("../logs/deepseek-3.1/logs.json"),
     ]
 
     exclude_models = [
