@@ -38,6 +38,7 @@ def get_default_models():
         "openrouter/deepseek/deepseek-chat-v3.1",
         "openrouter/openai/gpt-5-chat",
         "openrouter/moonshotai/kimi-k2-0905",
+        "openrouter/qwen/qwen3-max",
     ]
 
 
