@@ -37,7 +37,7 @@ def get_default_models():
         "openrouter/google/gemini-2.5-flash-lite",
         "openrouter/deepseek/deepseek-chat-v3.1",
         "openrouter/openai/gpt-5-chat",
-        "openrouter/anthropic/claude-opus-4.1",
+        "openrouter/moonshotai/kimi-k2-0905",
     ]
 
 
