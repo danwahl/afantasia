@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12.4"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name"}
+    {name = "Dan Wahl", email = "hi@danwahl.net"}
 ]
 dependencies = [
     "inspect-ai",
