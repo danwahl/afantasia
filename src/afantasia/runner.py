@@ -40,6 +40,7 @@ def get_default_models():
         "openrouter/moonshotai/kimi-k2-0905",
         "openrouter/qwen/qwen3-max",
         "openrouter/anthropic/claude-sonnet-4.5",
+        "openrouter/deepseek/deepseek-v3.2-exp",
     ]
 
 

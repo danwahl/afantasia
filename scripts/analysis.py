@@ -78,6 +78,7 @@ if __name__ == "__main__":
         Path("../logs/kimi-k2-0905/logs.json"),
         Path("../logs/qwen3-max/logs.json"),
         Path("../logs/claude-sonnet-4.5/logs.json"),
+        Path("../logs/deepseek-v3.2-exp/logs.json"),
     ]
 
     exclude_models = [
