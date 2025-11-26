@@ -8,6 +8,7 @@ ANSWER_REGEX = r"ANSWER\s*:\s*(\w+)"
 
 config = GenerateConfig(
     max_connections=5,
+    reasoning_effort="none",
     reasoning_tokens=None,
     # This doesn't work with Anthropic models
     # stop_seqs=["\n"],

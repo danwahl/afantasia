@@ -13,7 +13,7 @@ authors = [
     {name = "Dan Wahl", email = "hi@danwahl.net"}
 ]
 dependencies = [
-    "inspect-ai",
+    "inspect-ai @ git+https://github.com/danwahl/inspect_ai.git@fix-openrouter-reasoning-effort-none",
     "nltk",
     "openai",
     "python-chess",
