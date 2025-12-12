@@ -82,6 +82,7 @@ if __name__ == "__main__":
         Path("../logs/claude-haiku-4.5/logs.json"),
         Path("../logs/claude-opus-4.5/logs.json"),
         Path("../logs/gpt-5.1/logs.json"),
+        Path("../logs/gpt-5.2/logs.json"),
     ]
 
     exclude_models = [

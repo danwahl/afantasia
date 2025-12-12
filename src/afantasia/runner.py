@@ -44,6 +44,9 @@ def get_default_models():
         "openrouter/anthropic/claude-hakiu-4.5",
         "openrouter/anthropic/claude-opus-4.5",
         "openrouter/openai/gpt-5.1",
+        # "openrouter/deepseek/deepseek-v3.2",
+        # "openrouter/deepseek/deepseek-v3.2-speciale",
+        "openrouter/openai/gpt-5.2",
     ]
 
 
