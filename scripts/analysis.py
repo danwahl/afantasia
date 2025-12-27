@@ -85,6 +85,7 @@ if __name__ == "__main__":
         Path("../logs/gpt-5.2/logs.json"),
         Path("../logs/gemini-3-flash-preview/logs.json"),
         Path("../logs/gemini-3-pro-preview/logs.json"),
+        Path("../logs/gemini-2.5-pro/logs.json"),
     ]
 
     exclude_models = [
