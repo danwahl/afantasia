@@ -59,7 +59,9 @@ def cube(dataset_path=None):
 
     if dataset_path is None:
         # Default to the package data directory
-        dataset_path = os.path.join(os.path.dirname(__file__), "../../data/cube.json")
+        dataset_path = os.path.join(
+            os.path.dirname(__file__), "../../../data/cube.json"
+        )
 
     if not os.path.exists(dataset_path):
         raise FileNotFoundError(
