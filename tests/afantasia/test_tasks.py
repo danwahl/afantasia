@@ -3,7 +3,6 @@
 import os
 
 import pytest
-
 from afantasia.tasks import chess, cube, spell
 
 # Skip tests if dataset files don't exist
@@ -12,9 +11,7 @@ SKIP_REASON = "Dataset files not found - run afantasia --generate-datasets first
 
 def dataset_exists(name):
     """Check if a dataset file exists."""
-    path = os.path.join(
-        os.path.dirname(__file__), f"../../data/{name}.json"
-    )
+    path = os.path.join(os.path.dirname(__file__), f"../../data/{name}.json")
     return os.path.exists(path)
 
 
