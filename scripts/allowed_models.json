@@ -42,5 +42,6 @@
   "llama-3.3-70b-instruct",
   "mistral-large-2411",
   "qwen2.5-vl-72b-instruct",
-  "qwen3-max"
+  "qwen3-max",
+  "qwen3.6-plus"
 ]
