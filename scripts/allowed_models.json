@@ -8,6 +8,7 @@
   "claude-opus-4.5",
   "claude-opus-4.6",
   "claude-opus-4.8",
+  "claude-opus-5",
   "claude-sonnet-4",
   "claude-sonnet-4.5",
   "claude-sonnet-4.6",
@@ -56,6 +57,7 @@
   "qwen2.5-vl-72b-instruct",
   "qwen3-max",
   "qwen3.6-plus",
+  "qwen3.7-flash",
   "qwen3.7-max",
   "qwen3.7-plus"
 ]
