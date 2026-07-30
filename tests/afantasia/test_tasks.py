@@ -3,6 +3,7 @@
 import os
 
 import pytest
+
 from afantasia.tasks import chess, cube, spell
 
 # Skip tests if dataset files don't exist
