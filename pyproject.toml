@@ -59,3 +59,4 @@ no_implicit_optional = false
 
 [project.entry-points.inspect_ai]
 afantasia = "afantasia.tasks"
+afantasia_providers = "afantasia.providers"
