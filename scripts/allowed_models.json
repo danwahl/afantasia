@@ -54,6 +54,8 @@
   "llama-3.1-405b-instruct",
   "llama-3.3-70b-instruct",
   "minimax-m3",
+  "mimo-v2.6-flash",
+  "mimo-v2.6-pro",
   "mistral-large-2411",
   "nemotron-3-ultra-550b-a55b",
   "nemotron-3.5-lightning",
