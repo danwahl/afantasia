@@ -22,7 +22,6 @@ config = GenerateConfig(
     max_connections=5,
     reasoning_effort="none",
     # reasoning_tokens=0,
-    reasoning_enabled=False,
     # This doesn't work with Anthropic models
     # stop_seqs=["\n"],
     max_tokens=32,
