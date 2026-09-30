@@ -228,7 +228,10 @@ def main() -> None:
     # Convert accuracy to error rate (lower is better, "afantasia")
     data = 1 - data
     data["afantasia"] = data.mean(axis=1)
-    data.sort_values("afantasia", ascending=True, inplace=True)
+    # Break exact ties by name so reruns don't reshuffle the table.
+    data = data.sort_index().sort_values(
+        "afantasia", kind="stable", key=lambda s: s.round(6)
+    )
 
     # Reorder columns to put 'afantasia' first
     cols = ["afantasia"] + [col for col in data.columns if col != "afantasia"]
