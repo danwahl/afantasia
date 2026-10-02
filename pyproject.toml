@@ -29,7 +29,11 @@ dev = [
     "pytest-asyncio>=0.21.0",
     "ruff",
     "tabulate",
+    "evalib",
 ]
+
+[tool.uv.sources]
+evalib = { git = "https://github.com/danwahl/evalib", tag = "v0.2.0" }
 
 [tool.ruff]
 line-length = 88
