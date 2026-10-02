@@ -33,7 +33,7 @@ dev = [
 ]
 
 [tool.uv.sources]
-evalib = { git = "https://github.com/danwahl/evalib", tag = "v0.2.0" }
+evalib = { git = "https://github.com/danwahl/evalib", tag = "v0.2.1" }
 
 [tool.ruff]
 line-length = 88
