@@ -6,3 +6,4 @@ build/
 *.egg-info
 rerun-stage/
 _site/
+dataset/

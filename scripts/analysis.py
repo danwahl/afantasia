@@ -104,6 +104,7 @@ def run_result(eval_path: Path) -> Optional[Dict[str, Any]]:
         correct[str(sample.id)] = score is not None and str(score.value) == "C"
 
     return {
+        "path": eval_path,
         "model": log.eval.model.split("/")[-1],
         "provider": provider(log.eval.model),
         # Early runs suffix the task name with "_task".
@@ -177,6 +178,20 @@ def load_allowed() -> Optional[Set[str]]:
         return None
 
 
+def ranked_runs(
+    logs_dir: Path, min_valid: int = MIN_VALID
+) -> Tuple[Dict[str, Dict[str, Dict[str, Any]]], Set[str], Dict[str, List[str]]]:
+    """Summarize the allowed models' logs and pick their runs, as in
+    latest_valid_runs."""
+    eval_paths = sorted(logs_dir.rglob("*.eval"))
+    logger.info(f"Found {len(eval_paths)} eval files.")
+    allowed = load_allowed()
+    runs = [r for r in (run_result(p) for p in eval_paths) if r]
+    if allowed is not None:
+        runs = [r for r in runs if r["model"] in allowed]
+    return latest_valid_runs(runs, min_valid)
+
+
 def scores(samples: pd.DataFrame) -> Dict[str, float]:
     """Error rate per task, and their unweighted mean."""
     errors = 1 - samples.groupby("task")["correct"].mean()
@@ -193,19 +208,7 @@ def main() -> None:
         logger.error(f"Directory '{logs_dir}' does not exist.")
         sys.exit(1)
 
-    eval_paths = sorted(logs_dir.rglob("*.eval"))
-    logger.info(f"Found {len(eval_paths)} eval files.")
-
-    if not eval_paths:
-        logger.warning(f"No eval files found in '{logs_dir}'.")
-        sys.exit(0)
-
-    allowed = load_allowed()
-    runs = [r for r in (run_result(p) for p in eval_paths) if r]
-    if allowed is not None:
-        runs = [r for r in runs if r["model"] in allowed]
-
-    chosen, needed_retries, unranked = latest_valid_runs(runs, args.min_valid)
+    chosen, needed_retries, unranked = ranked_runs(logs_dir, args.min_valid)
     if not chosen:
         logger.error("No model has a valid run for every task.")
         sys.exit(0)
