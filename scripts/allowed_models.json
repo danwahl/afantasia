@@ -50,6 +50,7 @@
   "grok-4.20-beta",
   "hy3",
   "hy4",
+  "hy4-flash",
   "inkling",
   "kimi-k2",
   "kimi-k2-0905",
@@ -69,5 +70,6 @@
   "qwen3.7-flash",
   "qwen3.7-max",
   "qwen3.7-plus",
-  "qwen3.8-flash"
+  "qwen3.8-flash",
+  "qwen4-max"
 ]
